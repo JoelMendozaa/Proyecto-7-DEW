@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #dbdbdb;
     justify-items: center;
 }
@@ -12,7 +12,6 @@ body{
     padding: 20px;
     border-radius: 20px;
     position: relative;
-
 }
 
 .titulo {
@@ -29,7 +28,7 @@ body{
 input {
     display: block;
     padding: 8px 16px;
-    font-size: 2em;
+    font-size: 1em; /* Cambiado a un tamaño de fuente más pequeño */
     margin: 10px auto;
     width: 100%;
     box-sizing: border-box;
@@ -38,9 +37,19 @@ input {
     outline: none !important;
 }
 
-input.valid{
+.inline-inputs {
+    display: flex;
+    gap: 10px; /* Espacio entre los inputs en línea */
+}
+
+.inline-inputs input {
+    flex: 1; /* Hacer que ambos inputs ocupen el mismo espacio */
+}
+
+input.valid {
     border-color: #0f910f;
 }
-input.invalid{
+
+input.invalid {
     border-color: rgb(129, 16, 16);
 }
