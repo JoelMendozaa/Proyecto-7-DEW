@@ -1,5 +1,7 @@
 body {
-    background-color: #dbdbdb;
+    background-image: url(./images/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-items: center;
 }
 
@@ -8,7 +10,8 @@ body {
     flex-direction: column;
     gap: 10px;
     max-width: auto;
-    background-color: #fff;
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 20px;
     position: relative;
@@ -17,7 +20,7 @@ body {
 .titulo {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2em;
-    color: royalblue;
+    color:azure;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -52,4 +55,39 @@ input.valid {
 
 input.invalid {
     border-color: rgb(129, 16, 16);
+}
+
+
+.botones{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.boton1{
+    color: white;
+    background: linear-gradient(to left,#3700ff, #7802ff);
+    border: transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.boton2{
+    color: white;
+    background: linear-gradient(50deg,#3700ff, #7802ff);
+    border: transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.boton3{
+    color: white;
+    background: linear-gradient(to right,#3700ff, #7802ff);
+    border: transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
 }

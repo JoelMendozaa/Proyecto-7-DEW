@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="code.js"></script>
     <title>Formulario</title>
 </head>
 <body>
     <form class="form">
         <h1 class="titulo">Formulario</h1>
-        <input type="text" placeholder="Nombre" required>
-        <input type="text" placeholder="Primer apellido" required>
-        <input type="text" placeholder="Segundo apellido">
-        
+        <input type="text" placeholder="Nombre" required pattern="^[A-Z][a-zA-ZáéíóúÁÉÍÓÚÑñ]+$">
+        <input type="text" placeholder="Primer apellido" required pattern="^[A-Z][a-záéíóúÁÉÍÓÚÑñ]+$">
+        <input type="text" placeholder="Segundo apellido" pattern="^[A-Z][a-záéíóúÁÉÍÓÚÑñ]+$">
         <div class="inline-inputs">
-            <input type="text" placeholder="DNI" required>
+            <input type="text" placeholder="DNI/NIE" required pattern="^[A-Z0-9]{1,8}[A-Z]$">
             <input type="date" placeholder="Fecha nacimiento" required>
         </div>
-        
-        <input type="number" placeholder="Código Postal" required>
-        <input type="email" placeholder="Email" required>
-        <input type="number" placeholder="Teléfono fijo" required>
-        <input type="number" placeholder="Teléfono móvil" required>
-        <input type="text" placeholder="IBAN" required>
-        <input type="number" placeholder="Tarjeta de crédito" required>
-        <input type="password" placeholder="Contraseña" required>
+        <input type="text" placeholder="Código Postal" required pattern="^\d{5}$">
+        <input type="email" placeholder="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <input type="tel" placeholder="Teléfono fijo" required pattern="^\d{9}$">
+        <input type="tel" placeholder="Teléfono móvil" required pattern="^(\+34|34)?\d{9}$">
+        <input type="text" placeholder="IBAN" required pattern="^[A-Z]{2}\d{2}[A-Z0-9]{4,30}$">
+        <input type="text" placeholder="Tarjeta de crédito" required pattern="^4[0-9]{12}(?:[0-9]{3})?$">        
+        <input type="password" placeholder="Contraseña" required pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{12,}$">
         <input type="password" placeholder="Confirmar contraseña" required>
+        
+        <div class="botones">
+            <button class="boton1" type="submit">Enviar</button>
+            <button class="boton2" type="button">Guardar</button>
+            <button class="boton3" type="button">Recuperar</button>
+        </div>
     </form>
 </body>
 </html>
