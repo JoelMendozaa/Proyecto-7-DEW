@@ -9,19 +9,19 @@
 <body>
     <form class="form">
         <h1 class="titulo">Formulario</h1>
-        <input type="text" name="nombre" placeholder="Nombre" required pattern="^[A-Z][a-zA-ZáéíóúÁÉÍÓÚÑñ]+$">
+        <input type="text" name="nombre" placeholder="Nombre" required>
         <p>Debe empezar por mayúscula</p>
-        <input type="text" name="apellidos" placeholder="Apellidos" required pattern="^[A-Z][a-záéíóúÁÉÍÓÚÑñ]+$">
+        <input type="text" name="apellidos" placeholder="Apellidos" required>
         <p>Debe empezar por mayúscula</p>
         <div class="inline-inputs">
-            <input type="text" name="dni" placeholder="DNI/NIE" required pattern="^[A-Z0-9]{1,8}[A-Z]$">
+            <input type="text" name="dni" placeholder="DNI/NIE" required>
             <p>Deben tener entre 1 y 8 dígitos y terminar en una letra</p>
-            <input type="text" name="fechaNacimiento" placeholder="Fecha nacimiento" required pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$">
+            <input type="text" name="fechaNacimiento" placeholder="Fecha nacimiento" required>
             <p>Formato: DD/MM/YYYY</p>
         </div>
-        <input type="text" name="codigoPostal" placeholder="Código Postal" required pattern="^\d{5}$">
+        <input type="text" name="codigoPostal" placeholder="Código Postal" required>
         <p>Debe ser un número de 5 dígitos</p>
-        <input type="email" name="email" placeholder="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <input type="email" name="email" placeholder="Email" required>
         <p>Debe ser un correo electrónico válido</p>
         <input type="tel" name="telFijo" placeholder="Teléfono fijo" required pattern="^\d{9}$">
         <p>Debe ser un número de 9 dígitos</p>
