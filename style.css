@@ -1,8 +1,25 @@
 body {
+    padding-top: 10px;
     background-image: url(./images/Fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     justify-items: center;
+}
+
+input + p{
+    font-family: arial;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px;
+    color: red;
+    opacity: 0;
+    height: 0;
+}
+input.invalid + p{
+    opacity: 1;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .form {
@@ -50,11 +67,11 @@ input {
 }
 
 input.valid {
-    border-color: #0f910f;
+    border-color: #00ff00;
 }
 
 input.invalid {
-    border-color: rgb(129, 16, 16);
+    border-color: rgb(255, 0, 0);
 }
 
 
@@ -67,16 +84,18 @@ input.invalid {
 
 .boton1{
     color: white;
-    background: linear-gradient(to left,#3700ff, #7802ff);
+    background: linear-gradient(to bottom right, #ff9500, #ff4500);
     border: transparent;
     border-radius: 10px;
-    width: 100px;
+    width: 120px;
     height: auto;
+    padding: 10px;
+    font-weight: bold;
 }
 
 .boton2{
     color: white;
-    background: linear-gradient(50deg,#3700ff, #7802ff);
+    background: linear-gradient(50deg, #ff9500, #ff4500);
     border: transparent;
     border-radius: 10px;
     width: 100px;
@@ -85,7 +104,7 @@ input.invalid {
 
 .boton3{
     color: white;
-    background: linear-gradient(to right,#3700ff, #7802ff);
+    background: linear-gradient(to right, #ff9500, #ff4500);
     border: transparent;
     border-radius: 10px;
     width: 100px;

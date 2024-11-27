@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="code.js"></script>
     <title>Formulario</title>
 </head>
 <body>
     <form class="form">
         <h1 class="titulo">Formulario</h1>
-        <input type="text" placeholder="Nombre" required pattern="^[A-Z][a-zA-ZáéíóúÁÉÍÓÚÑñ]+$">
-        <input type="text" placeholder="Primer apellido" required pattern="^[A-Z][a-záéíóúÁÉÍÓÚÑñ]+$">
-        <input type="text" placeholder="Segundo apellido" pattern="^[A-Z][a-záéíóúÁÉÍÓÚÑñ]+$">
+        <input type="text" name="nombre" placeholder="Nombre" required pattern="^[A-Z][a-zA-ZáéíóúÁÉÍÓÚÑñ]+$">
+        <p>Debe empezar por mayúscula</p>
+        <input type="text" name="apellidos" placeholder="Apellidos" required pattern="^[A-Z][a-záéíóúÁÉÍÓÚÑñ]+$">
+        <p>Debe empezar por mayúscula</p>
         <div class="inline-inputs">
-            <input type="text" placeholder="DNI/NIE" required pattern="^[A-Z0-9]{1,8}[A-Z]$">
-            <input type="date" placeholder="Fecha nacimiento" required>
+            <input type="text" name="dni" placeholder="DNI/NIE" required pattern="^[A-Z0-9]{1,8}[A-Z]$">
+            <p>Deben tener entre 1 y 8 dígitos y terminar en una letra</p>
+            <input type="text" name="fechaNacimiento" placeholder="Fecha nacimiento" required pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$">
+            <p>Formato: DD/MM/YYYY</p>
         </div>
-        <input type="text" placeholder="Código Postal" required pattern="^\d{5}$">
-        <input type="email" placeholder="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-        <input type="tel" placeholder="Teléfono fijo" required pattern="^\d{9}$">
-        <input type="tel" placeholder="Teléfono móvil" required pattern="^(\+34|34)?\d{9}$">
-        <input type="text" placeholder="IBAN" required pattern="^[A-Z]{2}\d{2}[A-Z0-9]{4,30}$">
-        <input type="text" placeholder="Tarjeta de crédito" required pattern="^4[0-9]{12}(?:[0-9]{3})?$">        
-        <input type="password" placeholder="Contraseña" required pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{12,}$">
-        <input type="password" placeholder="Confirmar contraseña" required>
+        <input type="text" name="codigoPostal" placeholder="Código Postal" required pattern="^\d{5}$">
+        <p>Debe ser un número de 5 dígitos</p>
+        <input type="email" name="email" placeholder="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <p>Debe ser un correo electrónico válido</p>
+        <input type="tel" name="telFijo" placeholder="Teléfono fijo" required pattern="^\d{9}$">
+        <p>Debe ser un número de 9 dígitos</p>
+        <input type="tel" name="telMovil" placeholder="Teléfono móvil" required pattern="^(\+34|34)?\d{9}$">
+        <p>Debe ser un número de 9 dígitos y ser un número de teléfono español</p>
+        <input type="text" name="iban" placeholder="IBAN" required pattern="^[A-Z]{2}\d{2}[A-Z0-9]{4,24}$" maxlength="24">
+        <p>Debe empezar por dos letras seguido de números y letras</p>
+        <input type="text" name="tarjetaCredito" placeholder="Tarjeta de crédito" required pattern="^(?:\d{4}[- ]?){3}\d{4}$">
+        <p>Debe ser un número de 16 dígitos con espacios o guiones cada 4</p>
+        <input type="password" name="password" placeholder="Contraseña" required pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{12,}$">
+        <p>Debe tener al menos 12 caracteres, una letra, un número y un caracter especial</p>
+        <input type="password" name="confirmarPassword" placeholder="Confirmar contraseña" required pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{12,}$">
+        <p>Debe ser igual a la contraseña anterior</p>
         
         <div class="botones">
-            <button class="boton1" type="submit">Enviar</button>
-            <button class="boton2" type="button">Guardar</button>
-            <button class="boton3" type="button">Recuperar</button>
+            <button class="boton1" type="button" id="AutoRellenar">Auto-Rellenar</button>
+            <button class="boton2" type="button" id="Guardar">Guardar</button>
+            <button class="boton3" type="button" id="Recuperar">Recuperar</button>
         </div>
     </form>
+    <script src="code.js"></script>
 </body>
 </html>
+
